@@ -3,6 +3,7 @@ namespace BankEncapsulation;
 public class BankAccount
 {
     private double _balance = 0;
+    private int _pinNumber = 1234;
 
     public double Balance
     {
@@ -25,6 +26,11 @@ public class BankAccount
     public void Withdraw(double withdrawAmoount)
     {
         _balance -= withdrawAmoount;
+    }
+
+    public void ChangePin(int pinNumber)
+    {
+        _pinNumber = pinNumber;
     }
     public double GetBalance()
     {

@@ -11,6 +11,7 @@
                 Console.WriteLine("1. Make Deposit");
                 Console.WriteLine("2. Withdraw");
                 Console.WriteLine("3. Check Balance");
+                Console.WriteLine("4. Change PIN");
                 Console.WriteLine("5. Exit");
                 string userSelection = Console.ReadLine();
                 if (userSelection == "1")
@@ -30,6 +31,13 @@
                 else if (userSelection == "3")
                 {
                     Console.WriteLine(reggiesChecking.GetBalance());
+                }
+                else if (userSelection == "4")
+                {
+                    Console.WriteLine("Please enter a new 4 digit PIN.");
+                    int newPin = int.Parse(Console.ReadLine());
+                    reggiesChecking.ChangePin(newPin);
+                    Console.WriteLine("Your PIN has been updated.");
                 }
                 else if (userSelection == "5")
                 {
